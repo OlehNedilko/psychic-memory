@@ -7,7 +7,7 @@ import os
 
 async def root(request: fastapi.Request, age: int):
 
-    if age < 18:
+    if age < 8:
         return responses.FileResponse(path=os.path.join(PATH_TEMPLATES, 'error.html'))
     else:
         return templates.TemplateResponse(
